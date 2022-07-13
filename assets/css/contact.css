@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
   # Contact Section
   --------------------------------------------------------------*/
+.contact {
+  padding-top: 120px;
+}
+
 .contact .section-header {
   text-align: center;
   padding-bottom: 30px;

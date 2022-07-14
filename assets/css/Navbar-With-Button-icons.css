@@ -57,8 +57,8 @@
 
 .navbar {
   background-color: #f08632;
-  overflow: hidden;
-  position: fixed;
+  /*overflow: hidden;*/
+  /*position: fixed;*/
   top: 0;
   width: 100%;
 }

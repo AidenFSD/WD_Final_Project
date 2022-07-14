@@ -1,0 +1,21 @@
+/* hover effects for page - products */
+
+.card {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.1);
+}
+
+/* .nav-item a:hover {
+  
+} */
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+  color: yellow !important;
+  transform: scale(1.1);
+}

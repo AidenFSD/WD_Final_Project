@@ -128,7 +128,6 @@
 
 .navbar-nav .nav-item .contact-nav-link {
   color: $nav-item-selected-color;
-  transform: scale(1.1);
 }
 
 
@@ -205,7 +204,7 @@
 
 .flip-box-rotate180 {
   transform: rotateY(180deg);
-  
+  visibility: hidden;
 }
 
 .flip-box-rotate360 {

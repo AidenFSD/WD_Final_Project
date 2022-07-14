@@ -116,16 +116,6 @@
   background: $contact-color-primary;
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .navbar-nav .nav-item .contact-nav-link {
   color: $nav-item-selected-color;
 }
@@ -146,5 +136,4 @@
 
 .flip-box-rotate360 {
   transform: rotateY(360deg);
-  
 }

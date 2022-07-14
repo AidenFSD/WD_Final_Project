@@ -36,7 +36,7 @@
 <body>
     <!-- navigation bar start from here -->
     <nav class="navbar navbar-light navbar-expand-md py-3">
-        <div class="container">
+        <div class="container py-0">
             <img src="assets/img/android-chrome-192x192.png" width="90" height="90" /><button data-bs-toggle="collapse"
                 class="navbar-toggler" data-bs-target="#navcol-1">
                 <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
@@ -51,13 +51,13 @@
                         <a class="nav-link" href="products_fr.html"><strong>Produits</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="customize_fr.html"><strong>Gâteau personnalisé</strong></a>
+                        <a class="nav-link" href="Customize_FR.html"><strong>Gâteau personnalisé</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="specials_fr.html"><strong>Spéciaux</strong></a>
+                        <a class="nav-link" href="specials_FR.html"><strong>Spéciaux</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_fr.html"><strong>About</strong></a>
+                        <a class="nav-link" href="about_FR.html"><strong>About</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link  contact-nav-link" href="contact_fr.html"><strong>Contact</strong></a>
@@ -266,9 +266,6 @@
             <p class="mb-0">Copyright © 2022 Cake Art by James</p>
         </div>
     </footer>
-
-    <div id="preloader"></div>
-
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/Lightbox-Gallery.js"></script>
@@ -276,16 +273,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             "use strict";
-            /**
-             * Preloader
-             */
-            const preloader = document.querySelector('#preloader');
-            if (preloader) {
-                window.addEventListener('load', () => {
-                    preloader.remove();
-                });
-            }
-
+         
             window.addEventListener('load', () => {
                 let item = document.querySelector('#contactContainer');
                 item.className = "container flip-box flip-box-rotate360";

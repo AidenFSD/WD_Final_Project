@@ -16,6 +16,10 @@
   transform: scale(1.1);
 }
 
+.link-visited {
+  color: yellow !important;
+}
+
 /* Product CSS */
 
 .container {

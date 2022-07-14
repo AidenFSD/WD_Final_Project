@@ -34,6 +34,7 @@
 </head>
 
 <body>
+    
     <!-- navigation bar start from here -->
     <nav class="navbar navbar-light navbar-expand-md py-3">
         <div class="container">
@@ -267,24 +268,13 @@
             <p class="mb-0">Copyright © 2022 Cake Art by James</p>
         </div>
     </footer>
-    <div id="preloader"></div>
-
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/Lightbox-Gallery.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             "use strict";
-            /**
-             * Preloader
-             */
-            const preloader = document.querySelector('#preloader');
-            if (preloader) {
-                window.addEventListener('load', () => {
-                    preloader.remove();
-                });
-            }
-
+            
             window.addEventListener('load', () => {
                 let item = document.querySelector('#contactContainer');
                 item.className = "container flip-box flip-box-rotate360";

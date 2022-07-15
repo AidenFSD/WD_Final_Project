@@ -86,11 +86,12 @@
         style="max-width: 800px"
       >
         <!-- left box start from here -->
-        <div class="col order-md-first">
+        <div class="col order-md-first" 
+        itemscope itemtype="https://schema.org/Bakery">
           <!-- cakes link start from here -->
+          <span itemprop="hasMenu">
           <a href="cakes.html">
             
-
                 <div class="card">
                     <img
                     class="card-img w-100 d-block"
@@ -104,6 +105,7 @@
                 </div>
                 
               </a>
+            </span>
           <!-- cakes link end by here -->
         </div>
         <!-- left box end by here -->
@@ -122,24 +124,28 @@
         <!-- right box text end by here -->
 
         <!-- bottom left box start from here -->
-        <div class="col order-md-2">
+        <div class="col order-md-2" itemscope itemtype="https://schema.org/Bakery" >
           <!-- desserts link start from here -->
+          <span itemprop="hasMenu">
 
-          <a href="desserts.html">
-            <div class="card">
-              <img class="card-img w-100 d-block" src="assets/img/re2.jpg" />
-              <div
+            <a href="desserts.html">
+              <div class="card">
+                <img class="card-img w-100 d-block" src="assets/img/re2.jpg" />
+                <div
                 class="card-img-overlay text-center d-flex flex-column justify-content-center align-items-center p-4"
-              ></div>
-            </div>
-            <!-- desserts link end by here -->
-          </a>
-        </div>
+                ></div>
+              </div>
+              <!-- desserts link end by here -->
+            </a>
+          </span>
+          </div>
         <!-- bottom left box end by here -->
 
         <!-- bottom right box start from here -->
-        <div class="col order-md-2">
+        <div class="col order-md-2" itemscope itemtype="https://schema.org/Bakery">
             <!-- cupcakes link start from here -->
+            <span itemprop="hasMenu"> 
+
             <a href="cupcakes.html">
 
                 <div class="card">
@@ -152,7 +158,9 @@
                     ></div>
                 </a>
                 <!-- cupcakes link end by here -->
-          </div>
+              </span>
+
+              </div>
           <!-- bottom right box end by here -->
         </div>
       </div>

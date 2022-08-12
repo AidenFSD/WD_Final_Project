@@ -24,7 +24,6 @@
     <!-- bootstrap CSS Files -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -80,7 +79,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-        <div class="container flip-box flip-box-rotate180" id="contactContainer">
+        <div class="container" id="contactContainer">
 
             <div class="section-header">
                 <p>Need Help? <span>Contact Us</span></p>
@@ -157,66 +156,15 @@
                 </div>
                 <div class="text-center">
                     <button type="submit">
-                        <span class="invisible" role="status" aria-hidden="true" id="sendMsgLoading"></span>
+                        <span class="invisible spinner-border spinner-border-sm" role="status" aria-hidden="true" id="sendMsgLoading"></span>
                         <span>Send Message</span>
                     </button>
                 </div>
+                <input type="hidden" id="contact_json_url" value="contact.json">
             </form>
             <!--End Contact Form -->
         </div>
         <!-- Modal -->
-        <script>
-            const contactForm = document.getElementById("ContactSendMsgForm");
-            // Add 'submit' event handler
-            contactForm.addEventListener("submit", function (event) {
-                event.preventDefault();
-                sendMessage();
-            });
-
-            function sendMessage() {
-                console.log('start sending message');
-
-                let loading = document.getElementById("sendMsgLoading");
-                loading.className = "spinner-border spinner-border-sm";
-
-                let form = contactForm;
-                let inputs = form.getElementsByTagName("input");
-                let msg = form.getElementsByTagName("textarea");
-
-                let data = {
-                    name: inputs['name'].value,
-                    email: inputs['email'].value,
-                    subject: inputs['subject'].value,
-                    message: msg[0].value
-                }
-
-
-                const url = "contact.json"
-                let xhr = new XMLHttpRequest()
-
-                xhr.open('GET', url, true)
-                xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
-                xhr.send(JSON.stringify(data));
-
-                xhr.onload = function () {
-                    if (xhr.status === 200) {
-                        console.log("Post successfully created!")
-                        let myModal = new bootstrap.Modal(document.getElementById('contactSendMsgModal'), {});
-
-                        let responseJson = JSON.parse(xhr.responseText);
-                        document.getElementById("sendMsgModalBody").textContent = responseJson.message;
-
-                        window.setTimeout(
-                            function () {
-                                loading.className = "invisible";
-                                myModal.show();
-                            },
-                            1000
-                        );
-                    }
-                }
-            }
-        </script>
         <div class="modal fade " id="contactSendMsgModal" tabindex="-1" aria-labelledby="sendMsgModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -269,19 +217,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            "use strict";
-            
-            window.addEventListener('load', () => {
-                let item = document.querySelector('#contactContainer');
-                item.className = "container flip-box flip-box-rotate360";
-            });
-
-        })
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/contact.js"></script>
 </body>
-
 </html>

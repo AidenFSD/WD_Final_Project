@@ -16,7 +16,6 @@ $(document).ready(() => {
     });
 
     function isValid() {
-        console.log($('textarea.form-control')[0].value.length > 10 );
         return $('textarea.form-control')[0].value.length > 10 ? true : false;
     }
 
